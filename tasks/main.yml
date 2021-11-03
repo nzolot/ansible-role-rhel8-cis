@@ -413,7 +413,7 @@
   - no_reboot_needed | bool
   - unknown_strategy | bool
   - '"yum" in ansible_facts.packages'
-  - (ansible_distribution == "RedHat" or ansible_distribution == "CentOS" or ansible_distribution == "Scientific" or (yum_config_file.stat.exists | default(False)))
+  - (ansible_distribution == "RedHat" or ansible_distribution == "CentOS" or ansible_distribution == "Scientific" or ansible_distribution == "Rocky" or (yum_config_file.stat.exists | default(False)))
   tags:
   - CCE-80790-9
   - CJIS-5.10.4.1
